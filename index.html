@@ -4,25 +4,87 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ChatGPT Conversation Grabber</title>
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="https://i.postimg.cc/GtpZpjDT/Chat-GPT-Image-Oct-19-2025-09-57-09-AM.png">
+
+<!-- Early 2000s style CSS -->
 <style>
-  body { font-family: Arial, sans-serif; padding: 2rem; background: #f2f2f2; }
-  input { width: 80%; padding: 0.5rem; }
-  button { padding: 0.5rem 1rem; margin-left: 0.5rem; }
-  .conversation-box { background: #fff; padding: 1rem; margin-top: 1rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-  .message { margin-bottom: 1rem; }
-  .user { font-weight: bold; color: #2c3e50; }
-  .gpt { font-weight: bold; color: #16a085; }
-  .text { margin-left: 1rem; }
+    body {
+        background-color: #c0c0c0; /* gray background */
+        font-family: "Verdana", sans-serif;
+        color: #000080; /* dark blue text */
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #ff0000; /* red heading for that early web vibe */
+        text-decoration: underline;
+    }
+
+    input, button {
+        font-family: "Verdana", sans-serif;
+        font-size: 14px;
+        padding: 5px;
+        margin: 5px;
+        border: 2px solid #000080;
+        background-color: #ffffff;
+        color: #000080;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    .conversation-box {
+        margin: 20px auto;
+        width: 80%;
+        text-align: left;
+        background-color: #ffffff;
+        border: 2px solid #000080;
+        padding: 10px;
+        overflow-y: auto;
+        max-height: 400px;
+    }
+
+    .message {
+        margin-bottom: 10px;
+        border-bottom: 1px dotted #000080;
+        padding-bottom: 5px;
+    }
+
+    .user {
+        font-weight: bold;
+        color: #0000ff;
+    }
+
+    .gpt {
+        font-weight: bold;
+        color: #008000;
+    }
+
+    /* Optional marquee for early 2000s flair */
+    marquee {
+        color: #ff00ff;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
 </style>
 </head>
 <body>
 
+<marquee>Welcome to ChatGPT Conversation Grabber!</marquee>
+
 <h1>ChatGPT Conversation Grabber</h1>
+
 <input type="text" id="linkInput" placeholder="Paste ChatGPT share link here">
 <button id="fetchBtn">Fetch Conversation</button>
 <button id="copyBtn">Copy Conversation</button>
 
-<div id="conversationContainer"></div>
+<div id="conversationContainer" class="conversation-box"></div>
 
 <script src="app.js"></script>
 </body>
